@@ -131,4 +131,8 @@
   .form, .orcamento_dados ul {
     padding: 0;
   }
+
+  .contato_dados {
+    margin-top: 40px;
+  }
 }
