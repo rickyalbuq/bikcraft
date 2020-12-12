@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../css/portfolio.css" />
   <link rel="stylesheet" href="../css/responsivo.css" />
 
+  
+
   <title>Bikcraft - Portfólio</title>
 </head>
 
@@ -40,20 +42,31 @@
     </div>
   </section>
 
-  <section class="container">
+  <section class="container" data-slide="quote">
     <blockquote class="quote-clientes">
-      <p>"No mundo atual, a continua expansão de nossa
-        atividade cumpre um papel essencial na formulação da
-        gestão inovadora da qual fazemos parte."</p>
+      <p>"Pedalar sempre foi a minha paixão, o que o pessoal da Bikcraft fez foi intensificar o meu amor por esta atividade. Recomendo a todos que amo."</p>
       <cite>Barbara Moss</cite>
+    </blockquote>
+    <blockquote class="quote-clientes">
+      <p>"Nada melhor do que dar um rolê com a minha Bikcraft na orla. Essa é a minha companheira mais fiel, nunca me traiu e está sempre a minha disposição."</p>
+      <cite>Jhony Rato</cite>
+    </blockquote>
+    <blockquote class="quote-clientes">
+      <p>"Aqueles que ainda não possuem uma Bikcraft, não sabem o que estão perdendo. A precisão é absurda e a velocidade transcedental. Nunca vi nada igual."</p>
+      <cite>Bernardo Chucrute</cite>
     </blockquote>
   </section>
 
   <section class="portfolio">
-    <div class="container">
+    <div class="container" data-slide="portfolio">
       <ul class="portfolio_lista">
         <li class="grid-8"><img src="../img/portfolio/retro.jpg" alt="Bicicleta Retrô"></li>
         <li class="grid-8"><img src="../img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></li>
+        <li class="grid-16"><img src="../img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></li>
+      </ul>
+      <ul class="portfolio_lista">
+        <li class="grid-8"><img src="../img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></li>
+        <li class="grid-8"><img src="../img/portfolio/retro.jpg" alt="Bicicleta Retrô"></li>
         <li class="grid-16"><img src="../img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></li>
       </ul>
     </div>
@@ -99,6 +112,22 @@
       </div>
     </div>
   </footer>
+
+  <script src="../js/simple-slide.js"></script>;
+  <script type="text/javascript">
+    new SimpleSlide ({
+      slide: 'quote', // nome do atributo data-slide="principal"
+      time: 5000, // tempo de transição dos slides
+      pauseOnHover: true, // pausa a transição automática
+    });
+
+    new SimpleSlide({
+      slide: 'portfolio', // nome do atributo data-slide="principal"
+      nav: true, // se deve ou não mostrar a navegação
+      time: 5000, // tempo de transição dos slides
+      pauseOnHover: true, // pausa a transição automática
+    });
+  </script>
 </body>
 
 </html>
