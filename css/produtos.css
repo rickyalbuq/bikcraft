@@ -1,9 +1,10 @@
 /* Intro */
-.intro_sobre {
+.intro_produtos {
   background: url("../img/bg/bg-produtos.jpg") no-repeat center;
   background-size: cover;
 }
 
+/* Produtos */
 .produto-item {
   padding-top: 60px;
 }

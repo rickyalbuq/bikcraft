@@ -1,0 +1,29 @@
+/* Intro */
+.intro_portfolio {
+  background: url("../img/bg/bg-portfolio.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.quote-clientes {
+  margin: 0 auto;
+  padding: 60px 0;
+  max-width: 460px;
+}
+
+.quote-clientes p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.quote-clientes cite {
+  float: right;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: right;
+}
