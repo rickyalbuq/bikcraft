@@ -12,9 +12,11 @@
   <link rel="stylesheet" href="../css/portfolio.css" />
   <link rel="stylesheet" href="../css/responsivo.css" />
 
-  
-
   <title>Bikcraft - Portfólio</title>
+
+  <script src="../js/simple-anime.js"></script>
+  <script src="../js/simple-slide.js"></script>
+  <script defer src="../js/script.js"></script>
 </head>
 
 <body>
@@ -37,12 +39,12 @@
 
   <section class="introducao-interna intro_portfolio">
     <div class="container">
-      <h1>Portfólio</h1>
-      <p>conheça os projetos que amamos mostrar</p>
+      <h1 data-anime="400" class="fadeInDown">Portfólio</h1>
+      <p data-anime="800" class="fadeInDown">conheça os projetos que amamos mostrar</p>
     </div>
   </section>
 
-  <section class="container" data-slide="quote">
+  <section class="container fadeInDown" data-slide="quote" data-anime="1200">
     <blockquote class="quote-clientes">
       <p>"Pedalar sempre foi a minha paixão, o que o pessoal da Bikcraft fez foi intensificar o meu amor por esta atividade. Recomendo a todos que amo."</p>
       <cite>Barbara Moss</cite>
@@ -58,7 +60,7 @@
   </section>
 
   <section class="portfolio">
-    <div class="container" data-slide="portfolio">
+    <div class="container  fadeInDown" data-slide="portfolio"  data-anime="1600">
       <ul class="portfolio_lista">
         <li class="grid-8"><img src="../img/portfolio/retro.jpg" alt="Bicicleta Retrô"></li>
         <li class="grid-8"><img src="../img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></li>
@@ -112,22 +114,6 @@
       </div>
     </div>
   </footer>
-
-  <script src="../js/simple-slide.js"></script>;
-  <script type="text/javascript">
-    new SimpleSlide ({
-      slide: 'quote', // nome do atributo data-slide="principal"
-      time: 5000, // tempo de transição dos slides
-      pauseOnHover: true, // pausa a transição automática
-    });
-
-    new SimpleSlide({
-      slide: 'portfolio', // nome do atributo data-slide="principal"
-      nav: true, // se deve ou não mostrar a navegação
-      time: 5000, // tempo de transição dos slides
-      pauseOnHover: true, // pausa a transição automática
-    });
-  </script>
 </body>
 
 </html>
