@@ -11,6 +11,7 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 .btn {
@@ -127,6 +128,7 @@ img {
   text-align: center;
   
   background: url("../img/bg/bg.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .introducao h1 {
@@ -173,7 +175,6 @@ img {
 
   color: #fff;
   text-align: center;
-  background-size: cover;
 }
 
 .introducao-interna h1 {
@@ -229,7 +230,7 @@ img {
 }
 
 .produtos_icone img {
-  display: inline;
+  margin: 0 auto;
 }
 
 .call {
