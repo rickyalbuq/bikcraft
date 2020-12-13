@@ -15,6 +15,7 @@
   <title>Bikcraft - Contato</title>
 
   <script src="../js/simple-anime.js"></script>
+  <script src="../js/simple-form.js"></script>
   <script defer src="../js/script.js"></script>
 </head>
 
@@ -44,20 +45,26 @@
   </section>
 
   <section data-anime="1200" class="contato container fadeInDown">
-    <form class="grid-8 form" id="form_contato">
+    <form method="POST" action="../enviar.php" class="grid-8 form formphp" id="form_contato">
       <label for="nome">Nome</label>
-      <input type="text" name="nome" id="nome">
+      <input type="text" name="nome" id="nome" required>
 
       <label for="email">E-mail</label>
-      <input type="email" name="email" id="email">
+      <input type="email" name="email" id="email" required>
 
       <label for="telefone">Telefone</label>
       <input type="tel" name="telefone" id="telefone">
 
-      <label for="espec">Especificações</label>
-      <textarea name="espec" id="espec" cols="30" rows="10"></textarea>
+      <label class="nao-aparece" for="leaveblank">Se você não é um robô, deixe em branco.</label>
+      <input type="text" name="leaveblank" id="leaveblank" class="nao-aparece">
 
-      <button class="btn btn-preto" type="submit">Enviar</button>
+      <label class="nao-aparece" for="dontchange">Se você não é um robô, não altere esse campo.</label>
+      <input type="text" name="dontchange" id="dontchange" value="http://" class="nao-aparece">
+
+      <label for="mensagem">mensagem</label>
+      <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
+
+      <button id ="enviar" name="enviar" class="btn btn-preto" type="submit">Enviar</button>
     </form>
 
     <div class="grid-8 contato_dados">
