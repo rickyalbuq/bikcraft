@@ -12,17 +12,14 @@
 
 .quote-clientes p {
   margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 25px;
+  @include tipo-2(18);
   text-align: center;
   font-style: italic;
-  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .quote-clientes cite {
   float: right;
-  font-size: 18px;
-  line-height: 25px;
+  @include tipo-1(18);
   font-weight: bold;
   font-style: normal;
   text-align: right;

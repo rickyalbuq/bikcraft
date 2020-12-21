@@ -1,0 +1,469 @@
+/* Gerais */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  @include tipo-2(14);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.btn {
+  padding: 10px 30px;
+  color: $cor-primaria;
+  border: 3px solid $cor-primaria;
+
+  @include tipo-1(14);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  color: $branco;
+  border-color: $branco;
+}
+
+.btn.btn-preto:hover {
+  color: $preto;
+  border-color: $preto;
+}
+
+.subtitulo {
+  margin-bottom: 40px;
+
+  color: $preto;
+  @include tipo-1(24);
+  letter-spacing: 0.1em;
+
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitulo::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 8px auto;
+  background: $preto;
+}
+
+.subtitulo-interno {
+  margin-bottom: 20px;
+
+  color: $preto;
+  @include tipo-1(24);
+  letter-spacing: 0.1em;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.subtitulo-interno::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 8px 0;
+  background: $preto;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  width: 100%;
+  padding: 15px 0;
+  background-color: $cor-primaria;
+}
+
+.header_menu {
+  text-align: right;
+}
+
+.header_menu ul li {
+  display: inline-block;
+  margin: 20px 0 20px 25px;
+}
+
+.header_menu ul li a {
+  color: $preto;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  @include tipo-1(14);
+  padding: 10px 0;
+}
+
+.header_menu ul li a:hover {
+  color: $branco;
+}
+
+.header_menu ul li a.menu_ativo {
+  color: $branco;
+  cursor: default;
+}
+
+/* Intro */
+.introducao {
+  width: 100%;
+  min-height: 380px;
+
+  margin-top: 92px;
+  padding-top: 80px;
+  text-align: center;
+
+  background: url("../img/bg/bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.introducao h1 {
+  color: $branco;
+  @include tipo-1(48);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.quote-externo {
+  max-width: 320px;
+  margin: 0 auto 40px auto;
+  color: $branco;
+}
+
+.quote-externo p {
+  font-style: italic;
+}
+
+.quote-externo p::before,
+.quote-externo p::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 14px auto 10px auto;
+  background: $branco;
+}
+
+.quote-externo cite {
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include tipo-1(14);
+  letter-spacing: 0.1em;
+}
+
+/* Introdução Interna */
+.introducao-interna {
+  width: 100%;
+  height: 160px;
+  margin-top: 92px;
+  padding-top: 30px;
+
+  color: $branco;
+  text-align: center;
+}
+
+.introducao-interna h1 {
+  @include tipo-1(36);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.introducao-interna h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 6px auto 10px auto;
+  background: $branco;
+}
+
+/* Produtos */
+.produtos {
+  padding: 60px 0;
+}
+
+.produtos_lista li {
+  background: $cor-primaria;
+  text-align: center;
+}
+
+.produtos_lista h3 {
+  margin-top: 20px;
+  @include tipo-1(18);
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.produtos_lista h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 2px auto;
+  background: $preto;
+}
+
+.produtos_lista li p {
+  padding: 10px 20px 20px 20px;
+}
+
+.produtos_icone {
+  background: $preto;
+  padding: 20px;
+}
+
+.produtos_icone img {
+  margin: 0 auto;
+}
+
+.call {
+  padding-top: 40px;
+
+  clear: both;
+  text-align: center;
+}
+
+.call p {
+  margin-bottom: 20px;
+}
+
+/* Portfolio */
+.portfolio {
+  width: 100%;
+  padding: 40px 0;
+  background: $preto;
+}
+
+.portfolio .subtitulo {
+  color: $cor-primaria;
+}
+
+.portfolio .subtitulo::after {
+  background: $cor-primaria;
+}
+
+.portfolio_lista li:last-child {
+  margin-top: 20px;
+}
+.portfolio .call p {
+  color: $branco;
+}
+
+/* Qualidade */
+.qualidade {
+  padding: 60px 0;
+}
+
+.qualidade::after {
+  content: "";
+  width: 634px;
+  height: 83px;
+
+  top: 209px;
+  right: 162px;
+  z-index: -1;
+
+  display: block;
+  position: absolute;
+  background: url("../img/others/linhas.svg") no-repeat center;
+}
+
+.qualidade img {
+  margin: 0 auto;
+}
+
+.qualidade_lista {
+  padding-top: 20px;
+  overflow: auto; /* Clear-fix */
+}
+
+.qualidade_lista li {
+  padding: 0 40px;
+  text-align: center;
+}
+
+.qualidade_lista h3 {
+  margin-top: 20px;
+  @include tipo-1(18);
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.qualidade_lista h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 6px auto;
+  background: $preto;
+}
+
+/* Quebra */
+.quebra {
+  width: 100%;
+  height: 220px;
+  padding-top: 40px;
+
+  background: url("../img/bg/bg-footer.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+
+.quebra .quote-externo {
+  max-width: 400px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px 0;
+  color: $branco;
+  background: $preto;
+}
+
+.footer h3 {
+  color: $cor-primaria;
+  @include tipo-1(18);
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 6px 0 12px 0;
+  background: $cor-primaria;
+}
+
+.footer_historia {
+  padding-right: 40px;
+}
+
+.footer_contato ul li {
+  @include tipo-2(14);
+}
+
+.footer_redes ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer_redes ul li a {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+
+  display: block;
+  border: 3px solid $cor-primaria;
+}
+
+.footer_redes ul li a:hover {
+  border-color: $branco;
+}
+
+.footer_redes ul li a img {
+  width: 100%;
+  height: auto;
+}
+
+.copy {
+  width: 100%;
+  padding: 20px 0;
+  background: $cor-primaria;
+}
+
+/* Slide */
+.js [data-slide] {
+  position: relative;
+}
+
+.js [data-slide] > * {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+
+.js [data-slide] > .active {
+  position: relative;
+  opacity: 1;
+  transition: opacity 500ms;
+  z-index: 1;
+}
+
+/* Indicador Slide */
+.js [data-slide-nav] {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.js [data-slide-nav] > button {
+  display: inline-block;
+  width: 12px;
+  margin: 4px;
+  height: 12px;
+  border: none;
+  padding: 0px;
+  border-radius: 6px;
+  background: $cinza;
+  text-indent: -100px;
+  overflow: hidden;
+}
+
+.js [data-slide-nav] > button.active {
+  background: $cor-primaria;
+}
+
+/* Tipos de Animacoes */
+.js .fadeInDown {
+  transform: translate3d(0, -20px, 0);
+}
+.js .fadeInUp {
+  transform: translate3d(0, 20px, 0);
+}
+.js .fadeInRight {
+  transform: translate3d(20px, 0, 0);
+}
+.js .fadeInLeft {
+  transform: translate3d(-20px, 0, 0);
+}
+
+/* Animacao Textos */
+.js [data-anime] {
+  opacity: 0;
+}
+.js .anime {
+  opacity: 1;
+  transform: none;
+  transition: transform 0.8s, opacity 0.8s;
+}
+
+/* form */
+.nao-aparece {
+  height: 0;
+  position: absolute;
+  visibility: hidden;
+}
+
+#form-sucesso {
+  color: $sucesso;
+}
+
+#form-erro {
+  color: $erro;
+}

@@ -12,14 +12,12 @@
   margin-bottom: 1em;
   padding-right: 60px;
 
-  font-size: 18px;
-  line-height: 25px;
+  @include tipo-1(18);
 }
 
 .missao-sobre ul li {
-  font-size: 18px;
+  @include tipo-2(18);
   line-height: 30px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .foto-equipe {

@@ -16,10 +16,8 @@
 #form_contato label {
   display: block;
   margin-bottom: 4px;
-
-  font-size: 18px;
-  line-height: 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: $preto;
+  @include tipo-2(18);
 }
 
 #form_contato input {
@@ -28,12 +26,12 @@
   padding: 7px 2px;
   margin-bottom: 10px;
 
-  font-size: 14px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  @include tipo-2(14);
 
+  color: $preto;
   outline: none;
   background: none;
-  border: 4px solid #fec63e;
+  border: 4px solid $cor-primaria;
 }
 
 #form_contato textarea {
@@ -43,12 +41,12 @@
   padding: 7px 2px;
   margin-bottom: 20px;
 
-  font-size: 14px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  @include tipo-2(14);
 
+  color: $preto;
   outline: none;
   background: none;
-  border: 4px solid #fec63e;
+  border: 4px solid $cor-primaria;
 }
 
 #form_contato button {
@@ -57,8 +55,8 @@
 }
 
 .contato_dados h3 {
-  color: #fec63e;
-  font-size: 18px;
+  color: $cor-primaria;
+  @include tipo-1(18);
   line-height: 25px;
   font-weight: bold;
   text-transform: uppercase;
@@ -66,9 +64,8 @@
 
 .contato_dados span {
   display: block;
-  font-size: 18px;
+  @include tipo-2(18);
   line-height: 30px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .contato_dados span:nth-of-type(2) {
@@ -92,13 +89,13 @@
   width: 40px;
   height: 40px;
   padding: 10px;
-  
+
   display: block;
-  border: 3px solid #fec63e;
+  border: 3px solid $cor-primaria;
 }
 
 .contato_dados ul li a:hover {
-  border-color: #000;
+  border-color: $preto;
 }
 
 .contato_dados ul li a img {
