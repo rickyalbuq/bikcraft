@@ -54,6 +54,12 @@
   background: none;
 }
 
+.contato_dados {
+  @include d(m) {
+    margin-top: 40px;
+  }
+}
+
 .contato_dados h3 {
   color: $cor-primaria;
   @include tipo-1(18);

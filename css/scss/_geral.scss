@@ -83,15 +83,34 @@ img {
   width: 100%;
   padding: 15px 0;
   background-color: $cor-primaria;
+
+  @include d(m) {
+    position: relative;
+    padding-bottom: 0;
+  }
+}
+
+.header img {
+  @include d(m) {
+    margin: 0 auto 10px auto;
+  }
 }
 
 .header_menu {
   text-align: right;
+
+  @include d(m) {
+    text-align: center;
+  }
 }
 
 .header_menu ul li {
   display: inline-block;
   margin: 20px 0 20px 25px;
+
+  @include d(m) {
+    margin: 5px;
+  }
 }
 
 .header_menu ul li a {
@@ -99,16 +118,27 @@ img {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  @include tipo-1(14);
   padding: 10px 0;
+
+  @include tipo-1(14);
+  @include d(m) {
+    display: block;
+    float: left;
+    width: 136px;
+    border: 4px solid $preto;
+  }
 }
 
-.header_menu ul li a:hover {
+.header_menu ul li a:hover,
+.header_menu ul li a.menu_ativo {
   color: $branco;
+
+  @include d(m) {
+    border-color: $branco;
+  }
 }
 
 .header_menu ul li a.menu_ativo {
-  color: $branco;
   cursor: default;
 }
 
@@ -123,13 +153,23 @@ img {
 
   background: url("../img/bg/bg.jpg") no-repeat center;
   background-size: cover;
+
+  @include d(m) {
+    margin-top: 0;
+    padding: 40px 0;
+    background: url("../img/bg/bg-mobile.jpg") no-repeat center;
+    background-size: cover;
+  }
 }
 
 .introducao h1 {
   color: $branco;
-  @include tipo-1(48);
   font-weight: bold;
   text-transform: uppercase;
+  @include tipo-1(48);
+  @include d(m) {
+    @include tipo-1(36);
+  }
 }
 
 .quote-externo {
@@ -170,6 +210,9 @@ img {
 
   color: $branco;
   text-align: center;
+  @include d(m) {
+    margin-top: 0;
+  }
 }
 
 .introducao-interna h1 {
@@ -215,7 +258,7 @@ img {
 }
 
 .produtos_lista li p {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 15px 15px 15px;
 }
 
 .produtos_icone {
@@ -232,6 +275,10 @@ img {
 
   clear: both;
   text-align: center;
+
+  @include d(m) {
+    padding-top: 10px;
+  }
 }
 
 .call p {
@@ -277,6 +324,13 @@ img {
   display: block;
   position: absolute;
   background: url("../img/others/linhas.svg") no-repeat center;
+
+  @include d(t) {
+    right: 66px;
+  } 
+  @include d(m) {
+    display: none;
+  }
 }
 
 .qualidade img {
@@ -291,6 +345,10 @@ img {
 .qualidade_lista li {
   padding: 0 40px;
   text-align: center;
+
+  @include d(t) {
+    padding: 0 10px;
+  }
 }
 
 .qualidade_lista h3 {
